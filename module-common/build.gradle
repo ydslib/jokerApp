@@ -1,21 +1,20 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
+    namespace 'com.ydslib.common'
     compileSdk Config.compileSdk
 
     defaultConfig {
-        applicationId "com.yds.jokerapp"
-        minSdkVersion Config.minSdkVersion
-        targetSdkVersion Config.targetSdkVersion
+        applicationId "com.ydslib.common"
+        minSdk Config.minSdkVersion
+        targetSdk Config.targetSdkVersion
         versionCode Config.versionCode
         versionName Config.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -38,6 +37,5 @@ dependencies {
     implementation "androidx.core:core-ktx:${Config.coreKtx}"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${Config.lifecycleRuntimeKtx}"
     implementation "androidx.appcompat:appcompat:${Config.appcompat}"
-    implementation "com.github.ydslib:LogLib:${Config.LogLib}"
-    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper4:${Config.BaseRecyclerViewAdapterHelper4}"
+    implementation "com.google.android.material:material:${Config.material}"
 }
